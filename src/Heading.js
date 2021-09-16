@@ -1,15 +1,13 @@
 class Heading extends React.Component {
-
-  // обязательно для компонента
+  constructor(props) {
+    super(props);
+  }
+ 
   render() {
-    console.log(this.props);
-    // достаем из ящика наши настройки
-    const { givenId, givenTitle , children, headingLevel } = this.props;
-    // обязательно возвращаем React.createElement 
+    const {givenTitle, children} = this.props;
     return React.createElement(
-      `h${headingLevel}`,
-      { className: 'header-title', id: givenId , title: givenTitle},
-      ...children
+      'div',
+      { className: 'imgWrapper', title: givenTitle }, ...children
     );
   }
 }
