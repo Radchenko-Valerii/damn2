@@ -1,3 +1,4 @@
+
 class imgWrapper extends React.Component {
   render() {
     const { givenSrc, givenAlt } = this.props;
@@ -15,3 +16,4 @@ class imgWrapper extends React.Component {
 }
 
 module.exports = imgWrapper;
+
