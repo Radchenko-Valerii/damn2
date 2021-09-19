@@ -1,9 +1,17 @@
-class Component {
+class imgWrapper extends React.Component {
   render() {
-    return 'hello';
+    const { givenSrc, givenAlt } = this.props;
+    return React.createElement(
+      "div",
+      { className: "imgWrapper" },
+      React.createElement("img", {
+        className: "img",
+        src: givenSrc,
+        alt: givenAlt,
+        title: givenAlt,
+      })
+    );
   }
 }
 
-console.log(2+2);
-
-module.exports = Component;
+module.exports = imgWrapper;

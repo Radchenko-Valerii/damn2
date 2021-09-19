@@ -1,13 +1,11 @@
-const Component = require('./Component');
-require('./style.css');
-require('./logo.png')
+const imgWrapper = require("./Component");
 
-const isReady = true;
+const cont = document.getElementById("root");
 
-const root = document.getElementById('root');
+const element = React.createElement(imgWrapper, {
+  givenSrc:
+    "https://upload.wikimedia.org/wikipedia/ru/f/f5/Logo_Serie_A_TIM_2019.png",
+  givenAlt: "serie A",
+});
 
-root.append('Вставили через ЖС jgznm');
-
-const comp1 = new Component();
-
-console.log(1);
+ReactDOM.render(element, cont);
